@@ -31,7 +31,7 @@
       service:
         name: httpd
         state: started
-    - name: Installation epel-release
+    - name: Installation epel release
       yum:
         name: epel-release
         state: latest
@@ -63,7 +63,7 @@
     - name: MCM Agent Setting File Download
       get_url: 
         url: http://10.113.1.98/module/APPMGT_silent_install_web.txt
-        dest: /tmp/mcmagen
+        dest: /tmp/mcmagent
       when: not mcmagent_result.stat.exists
     - name: unarchive installation module
       unarchive:
