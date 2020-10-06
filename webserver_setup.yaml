@@ -56,7 +56,7 @@
       stat: path=/opt/ibm/apm/agent
       register: mcmagent_result
     - name: MCM Agent Module Download
-      get url: 
+      get_url: 
         url: http://10.113.1.98/module/cp4mcm_Agents_xlinux_2.0.tar.gz
         dest: /tmp/mcmagent
       when: not mcmagent_result.stat.exists
